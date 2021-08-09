@@ -6,38 +6,48 @@ const Directory = () => {
   const [item, setItem] = useState({
     sections: [
       {
-        title: 'hats',
-        imageUrl: 'https://i.ibb.co/cvpntL1/hats.png',
+        title: 'samsung',
+        imageUrl:
+          'https://images.unsplash.com/photo-1575718120842-54e388d8cc6f?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1050&q=80',
         id: 1,
+        linkUrl: 'samsung',
       },
       {
-        title: 'jackets',
-        imageUrl: 'https://i.ibb.co/px2tCc3/jackets.png',
+        title: 'iphone',
+        imageUrl:
+          'https://images.unsplash.com/photo-1523206489230-c012c64b2b48?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=2468&q=80',
         id: 2,
+        linkUrl: 'iphone',
       },
       {
-        title: 'sneakers',
-        imageUrl: 'https://i.ibb.co/0jqHpnp/sneakers.png',
+        title: 'Xiaomi',
+        imageUrl:
+          'https://images.unsplash.com/photo-1620294447945-ffcbc4a09735?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=2600&q=80',
         id: 3,
+        linkUrl: 'xiaomi',
       },
       {
-        title: 'womens',
-        imageUrl: 'https://i.ibb.co/GCCdy8t/womens.png',
+        title: 'Boshqa telefonlar',
+        imageUrl:
+          'https://images.unsplash.com/photo-1585060282215-39a72f82385c?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=2565&q=80',
         size: 'large',
         id: 4,
+        linkUrl: 'boshqa-telefonlar',
       },
       {
-        title: 'mens',
-        imageUrl: 'https://i.ibb.co/R70vBrQ/men.png',
+        title: 'Komputerlar',
+        imageUrl:
+          'https://images.unsplash.com/photo-1494698853255-d0fa521abc6c?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1100&q=80',
         size: 'large',
         id: 5,
+        linkUrl: 'komputerlar',
       },
     ],
   });
   return (
     <div className='directory-menu'>
-      {item.sections.map(({ title, imageUrl, id, size }) => (
-        <MenuItem title={title} imageUrl={imageUrl} key={id} size={size} />
+      {item.sections.map(({ id, ...otherSectionProps }) => (
+        <MenuItem key={id} {...otherSectionProps} />
       ))}
     </div>
   );
