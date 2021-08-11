@@ -27,7 +27,6 @@ class App extends Component {
               ...snapShot.data(),
             },
           });
-          console.log(this.state);
         });
       }
       this.setState({
@@ -49,7 +48,7 @@ class App extends Component {
           <Route path='/shop'>
             <Shop />
           </Route>
-          <Route path='/signin'>
+          <Route path='/kirish'>
             <Signin />
           </Route>
         </Switch>
