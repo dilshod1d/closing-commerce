@@ -8,14 +8,14 @@ const Directory = () => {
       {
         title: 'samsung',
         imageUrl:
-          'https://images.unsplash.com/photo-1581508473167-1c80505e5e8b?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1051&q=80$',
+          'https://images.unsplash.com/photo-1568378711447-f5eef04d85b5?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1049&q=80',
         id: 1,
         linkUrl: 'samsung',
       },
       {
         title: 'iphone',
         imageUrl:
-          'https://images.unsplash.com/photo-1523206489230-c012c64b2b48?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=2468&q=80',
+          'https://images.unsplash.com/photo-1510557880182-3d4d3cba35a5?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1050&q=80',
         id: 2,
         linkUrl: 'iphone',
       },
@@ -29,7 +29,7 @@ const Directory = () => {
       {
         title: 'Boshqa telefonlar',
         imageUrl:
-          'https://images.unsplash.com/photo-1585060282215-39a72f82385c?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=2565&q=80',
+          'https://images.unsplash.com/photo-1555774698-0b77e0d5fac6?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80',
         size: 'large',
         id: 4,
         linkUrl: 'boshqa-telefonlar',

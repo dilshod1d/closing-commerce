@@ -18,8 +18,8 @@ const SigninComponent = () => {
   };
   return (
     <div className='sign-in'>
-      <h2>Already have an account</h2>
-      <span>Sign in with your email and password</span>
+      <h2>Allaqachon akkountingiz bormi?</h2>
+      <span>Email va parol bilan kiring</span>
       <form onSubmit={handleSubmit}>
         <FormInput
           type='email'
@@ -35,14 +35,14 @@ const SigninComponent = () => {
           name='password'
           value={form.password}
           handleChange={handleChange}
-          label='Password'
+          label='Parol'
           required
         />
 
         <div className='buttons'>
-          <Button type='submit'>Sign in</Button>
-          <Button onClick={signinWithGoogle} isGoogleSignin>
-            Sign in with Google
+          <Button type='submit'>Kirish</Button>
+          <Button type='button' onClick={signinWithGoogle} isGoogleSignin>
+            Google bilan kirish
           </Button>
         </div>
       </form>
