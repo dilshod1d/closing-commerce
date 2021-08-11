@@ -8,7 +8,7 @@ const Directory = () => {
       {
         title: 'samsung',
         imageUrl:
-          'https://images.unsplash.com/photo-1575718120842-54e388d8cc6f?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1050&q=80',
+          'https://images.unsplash.com/photo-1581508473167-1c80505e5e8b?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1051&q=80$',
         id: 1,
         linkUrl: 'samsung',
       },
