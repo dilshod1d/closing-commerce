@@ -1,6 +1,10 @@
 import FormInput from '../form-input/form-input.component';
 import Button from '../button/button.component';
-import { auth, createUserProfileDocument } from '../../firebase/firebase.utils';
+import {
+  auth,
+  createUserProfileDocument,
+  signinWithGoogle,
+} from '../../firebase/firebase.utils';
 import './signup.styles.scss';
 import { Component } from 'react';
 class SignUp extends Component {
@@ -81,7 +85,14 @@ class SignUp extends Component {
             label='Parolni Qayta Kiriting'
             required
           />
-          <Button type='submit'>Ro'yxatdan O'tish</Button>
+          <div className='buttons'>
+            <Button type='submit' style={{ marginBottom: '10px' }}>
+              Ro'yxatdan O'tish
+            </Button>
+            <Button type='button' onClick={signinWithGoogle} isGoogleSignin>
+              Google bilan ro'yxatdan o'tish
+            </Button>
+          </div>
         </form>
       </div>
     );
