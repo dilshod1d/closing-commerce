@@ -1,5 +1,5 @@
 .sign-in {
-  width: 380px;
+  width: 400px;
   margin-left: 30px;
   display: flex;
   flex-direction: column;
@@ -9,5 +9,9 @@
   .buttons {
     display: flex;
     justify-content: space-between;
+  }
+
+  .icon {
+    font-size: 30px;
   }
 }

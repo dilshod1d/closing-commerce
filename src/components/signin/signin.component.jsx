@@ -3,6 +3,7 @@ import './signin.styles.scss';
 import FormInput from '../form-input/form-input.component';
 import Button from '../button/button.component';
 import { auth, signinWithGoogle } from '../../firebase/firebase.utils';
+import { FcGoogle } from 'react-icons/fc';
 class SigninComponent extends Component {
   constructor(props) {
     super(props);
@@ -54,8 +55,19 @@ class SigninComponent extends Component {
 
           <div className='buttons'>
             <Button type='submit'>Kirish</Button>
-            <Button type='button' onClick={signinWithGoogle} isGoogleSignin>
-              Google bilan kirish
+
+            <Button
+              type='button'
+              onClick={signinWithGoogle}
+              isGoogleSignin
+              style={{
+                display: 'flex',
+                justifyContent: 'space-between',
+                alignItems: 'center',
+              }}
+            >
+              <FcGoogle className='icon' />
+              oogle bilan kirish
             </Button>
           </div>
         </form>
