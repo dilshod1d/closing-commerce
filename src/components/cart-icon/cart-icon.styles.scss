@@ -9,12 +9,12 @@
 
   .shopping-icon {
     font-size: 30px;
-    // font-weight: 300;
+    overflow: hidden;
   }
 
   .item-count {
     position: absolute;
-    font-size: 10px;
+    font-size: 12px;
     font-weight: bold;
     bottom: 12px;
     color: #fff;
