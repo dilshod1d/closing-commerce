@@ -1,17 +1,13 @@
 import './shop.styles.scss';
-import { useState } from 'react';
-import SHOP_DATA from './shop.data';
-import PreviewCollection from '../../components/preview-collection/preview-collection.component';
-const Shop = () => {
-  const [collectionState, setCollectionState] = useState({
-    collections: SHOP_DATA,
-  });
-  const { collections } = collectionState;
+import CollectionOverview from '../../components/collection-overview/collection-overview.component';
+import { Route } from 'react-router-dom';
+import Category from '../category/category.component';
+const Shop = ({ match }) => {
+  console.log(match);
   return (
     <div className='shop-page'>
-      {collections.map(({ id, ...rest }) => (
-        <PreviewCollection key={id} {...rest} />
-      ))}
+      <Route exact path={`${match.path}`} component={CollectionOverview} />
+      <Route path={`${match.path}/:collectionId`} component={Category} />
     </div>
   );
 };

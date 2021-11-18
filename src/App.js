@@ -13,7 +13,6 @@ import { selectCurrentUser } from './redux/user/user.selector';
 import { createStructuredSelector } from 'reselect';
 import Checkout from './pages/checkout/Checkout';
 
-
 class App extends Component {
   unsubscribeFromAuth = null;
   componentDidMount() {
@@ -39,15 +38,9 @@ class App extends Component {
       <div className='App'>
         <Header />
         <Switch>
-          <Route exact path='/'>
-            <Home />
-          </Route>
-          <Route path='/shop'>
-            <Shop />
-          </Route>
-          <Route path='/checkout'>
-            <Checkout />
-          </Route>
+          <Route exact path='/' component={Home} />
+          <Route path='/shop' component={Shop} />
+          <Route path='/checkout' component={Checkout} />
           <Route
             exact
             path='/kirish'

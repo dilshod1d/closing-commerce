@@ -1,8 +1,8 @@
-const SHOP_DATA = [
-  {
+const SHOP_DATA = {
+  samsung: {
     id: 1,
-    title: 'Hats',
-    routeName: 'hats',
+    title: 'Samsung',
+    routeName: 'samsung',
     items: [
       {
         id: 1,
@@ -60,10 +60,10 @@ const SHOP_DATA = [
       },
     ],
   },
-  {
+  iphone: {
     id: 2,
-    title: 'Sneakers',
-    routeName: 'sneakers',
+    title: 'Iphone',
+    routeName: 'iphone',
     items: [
       {
         id: 10,
@@ -115,10 +115,10 @@ const SHOP_DATA = [
       },
     ],
   },
-  {
+  xiaomi: {
     id: 3,
-    title: 'Jackets',
-    routeName: 'jackets',
+    title: 'Xiaomi',
+    routeName: 'xiaomi',
     items: [
       {
         id: 18,
@@ -152,10 +152,10 @@ const SHOP_DATA = [
       },
     ],
   },
-  {
+  boshqa: {
     id: 4,
-    title: 'Womens',
-    routeName: 'womens',
+    title: 'Boshqa telefonlar',
+    routeName: 'boshqa',
     items: [
       {
         id: 23,
@@ -201,10 +201,10 @@ const SHOP_DATA = [
       },
     ],
   },
-  {
+  kompyuterlar: {
     id: 5,
-    title: 'Mens',
-    routeName: 'mens',
+    title: 'Kompyuterlar',
+    routeName: 'kompyuterlar',
     items: [
       {
         id: 30,
@@ -244,6 +244,6 @@ const SHOP_DATA = [
       },
     ],
   },
-];
+};
 
 export default SHOP_DATA;
