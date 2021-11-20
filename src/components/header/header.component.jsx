@@ -1,4 +1,3 @@
-import './header.styles.scss';
 import { Link } from 'react-router-dom';
 import Logo from '../../assets/logo.png';
 import { createStructuredSelector } from 'reselect';
@@ -8,38 +7,69 @@ import CartIcon from '../cart-icon/cart-icon.component';
 import CartDropdown from '../cart-dropdown/cart-dropdown.component';
 import { selectCartHidden } from '../../redux/cart/cart.selectors';
 import { selectCurrentUser } from '../../redux/user/user.selector';
+import styled from 'styled-components';
 
 const Header = ({ currentUser, hidden }) => {
   return (
-    <div className='header'>
-      <Link to='/' className='logo-container'>
-        <img src={Logo} alt='logo' className='logo' />
-      </Link>
-      <div className='options'>
-        <Link to='/shop' className='option'>
-          DO'KON
-        </Link>
-        <Link to='/contact' className='option'>
-          BOG'LANISH
-        </Link>
+    <Container>
+      <LogoContainer to='/'>
+        <LogoImg src={Logo} alt='logo' />
+      </LogoContainer>
+      <NavContainer>
+        <Nav to='/shop'>DO'KON</Nav>
+        <Nav to='/contact'>BOG'LANISH</Nav>
         {currentUser ? (
-          <div className='option' onClick={() => auth.signOut()}>
+          <Nav as='div' onClick={() => auth.signOut()}>
             CHIQISH
-          </div>
+          </Nav>
         ) : (
-          <Link to='/kirish' className='option'>
-            KIRISH
-          </Link>
+          <Nav to='/kirish'>KIRISH</Nav>
         )}
         <CartIcon />
-      </div>
+      </NavContainer>
       {hidden ? null : <CartDropdown />}
-    </div>
+    </Container>
   );
 };
 const mapStateToProps = createStructuredSelector({
   currentUser: selectCurrentUser,
   hidden: selectCartHidden,
 });
+
+const Container = styled.div`
+  height: auto;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  margin: auto;
+`;
+
+const LogoContainer = styled(Link)`
+  height: auto;
+  width: 200px;
+  padding: 25px;
+`;
+
+const LogoImg = styled.img`
+  background-size: cover;
+  width: 200px;
+  height: auto;
+`;
+
+const NavContainer = styled.div`
+  width: 50%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+`;
+
+const Nav = styled(Link)`
+  padding: 10px 15px;
+  cursor: pointer;
+  font-weight: 500;
+`;
 
 export default connect(mapStateToProps)(Header);

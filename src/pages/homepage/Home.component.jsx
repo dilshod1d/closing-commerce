@@ -1,11 +1,18 @@
-import './home.styles.scss';
+import styled from 'styled-components';
 import Directory from '../../components/directory/directory.component';
 const Home = () => {
   return (
-    <div className='homepage'>
+    <Container>
       <Directory />
-    </div>
+    </Container>
   );
 };
+
+const Container = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px 80px;
+`;
 
 export default Home;
