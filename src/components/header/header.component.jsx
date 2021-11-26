@@ -1,15 +1,15 @@
 import { Link } from 'react-router-dom';
 import Logo from '../../assets/logo.png';
 import { createStructuredSelector } from 'reselect';
-import { auth } from '../../firebase/firebase.utils';
 import { connect } from 'react-redux';
 import CartIcon from '../cart-icon/cart-icon.component';
 import CartDropdown from '../cart-dropdown/cart-dropdown.component';
 import { selectCartHidden } from '../../redux/cart/cart.selectors';
 import { selectCurrentUser } from '../../redux/user/user.selector';
+import { signOutStart } from '../../redux/user/user.actions';
 import styled from 'styled-components';
 
-const Header = ({ currentUser, hidden }) => {
+const Header = ({ currentUser, hidden, signOutStart }) => {
   return (
     <Container>
       <LogoContainer to='/'>
@@ -19,7 +19,7 @@ const Header = ({ currentUser, hidden }) => {
         <Nav to='/shop'>DO'KON</Nav>
         <Nav to='/contact'>BOG'LANISH</Nav>
         {currentUser ? (
-          <Nav as='div' onClick={() => auth.signOut()}>
+          <Nav as='div' onClick={signOutStart}>
             CHIQISH
           </Nav>
         ) : (
@@ -34,6 +34,10 @@ const Header = ({ currentUser, hidden }) => {
 const mapStateToProps = createStructuredSelector({
   currentUser: selectCurrentUser,
   hidden: selectCartHidden,
+});
+
+const mapDispatchToProps = (dispatch) => ({
+  signOutStart: () => dispatch(signOutStart()),
 });
 
 const Container = styled.div`
@@ -72,4 +76,4 @@ const Nav = styled(Link)`
   font-weight: 500;
 `;
 
-export default connect(mapStateToProps)(Header);
+export default connect(mapStateToProps, mapDispatchToProps)(Header);
